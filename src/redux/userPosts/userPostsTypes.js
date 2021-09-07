@@ -1,0 +1,5 @@
+export const UserPostActionTypes = {
+    SHOW_HIDE_POSTS_TABLE: 'SHOW_HIDE_POSTS_TABLE',
+    GET_USER_ID: 'GET_USER_ID',
+    GET_USER_POSTS: 'GET_USER_POSTS'
+}
