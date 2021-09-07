@@ -1,7 +1,7 @@
 import { UserPostActionTypes } from "./userPostsTypes"
 
 const INITIAL_STATE = {
-    hideTable: true,
+    hideTable: false,
     userId: '',
     posts: []
 
@@ -12,7 +12,7 @@ const userPostsReducer = (state = INITIAL_STATE, action) => {
         case UserPostActionTypes.SHOW_HIDE_POSTS_TABLE:
             return {
                 ...state,
-                hideTable: !state.hideTable
+                hideTable: true
             }
         case UserPostActionTypes.GET_USER_ID:
             return {

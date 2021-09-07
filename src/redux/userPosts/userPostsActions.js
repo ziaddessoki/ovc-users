@@ -1,6 +1,6 @@
 import { UserPostActionTypes } from "./userPostsTypes";
 
-export const showTable = () => ({
+export const showPostsTable = () => ({
     type: UserPostActionTypes.SHOW_HIDE_POSTS_TABLE
 })
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import UserTableBody from './UserTableBody';
+import PostsTableBody from './PostsTableBody';
 
 const Table = ({ headers, data, customClass }) => {
     return (
@@ -15,7 +16,7 @@ const Table = ({ headers, data, customClass }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <UserTableBody data={data} />
+                    {customClass === "userTable" ? <UserTableBody data={data} /> : <PostsTableBody data={data} />}
                 </tbody>
             </table>
         </div >

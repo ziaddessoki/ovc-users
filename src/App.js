@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { connect } from 'react-redux'
 
 import Table from './components/Table';
+import Posts from './components/Posts';
 
 import { getUsers } from './redux/users/usersActions'
 
@@ -26,18 +27,14 @@ function App({ getUsers, users }) {
 
   const filteredUsers = users.filter(user => user.name.toLowerCase().includes(searchField))
 
-  // const userPost = async (id) => {
-  //   const res = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
-  //   const posts = await res.json()
-  //   return posts
-  // }
+
 
 
   return (
     <div className="App">
-      <input type="Search" placeholder="Search Name" onChange={e => setSearchField(e.target.value)} />
+      <input className="SearchField" type="Search" placeholder="Search Name" onChange={e => setSearchField(e.target.value)} />
       <Table headers={["Name", "Email", "City", "Company"]} data={filteredUsers} customClass={'userTable'} />
-      <Table headers={['Title', 'Body']} data={filteredUsers} customClass={'postsTable'} />
+      <Posts />
     </div>
   );
 }
