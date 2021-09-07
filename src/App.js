@@ -22,7 +22,7 @@ function App({ getUsers, users }) {
       getUsers(users)
     };
     fetchUsers()
-  }, [])
+  }, [getUsers])
 
 
   const filteredUsers = users.filter(user => user.name.toLowerCase().includes(searchField))

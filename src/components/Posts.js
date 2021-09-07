@@ -5,7 +5,7 @@ import Table from './Table'
 const Posts = ({ posts, showPostTable }) => {
     return (
         <div>
-            {showPostTable ? <Table headers={['Title', 'Body']} customClass={'postsTable'} data={posts} /> : ''}
+            {showPostTable && <Table headers={['Title', 'Body']} customClass={'postsTable'} data={posts} />}
         </div>
     )
 }
